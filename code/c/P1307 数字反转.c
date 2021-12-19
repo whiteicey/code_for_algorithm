@@ -1,0 +1,57 @@
+#include <stdio.h>
+int main()
+{
+	long long a,i=1;
+	scanf("%lld",&a);
+	if(a<0)
+	{
+		printf("-");
+		a=a*(-1);
+		while(a!=0)
+		{
+			if(i==1)
+			{
+				if(a%10==0)
+				{
+					a/=10;
+				}
+				else
+				{
+					i++;
+					printf("%d",a%10);
+					a/=10;
+				}
+			}
+			else
+			{
+				printf("%d",a%10);
+				a/=10;
+			}
+		}
+	}
+	else
+	{
+		while(a!=0)
+		{
+			if(i==1)
+			{
+				if(a%10==0)
+				{
+					a/=10;
+				}
+				else
+				{
+					i++;
+					printf("%d",a%10);
+					a/=10;
+				}
+			}
+			else
+			{
+				printf("%d",a%10);
+				a/=10;
+			}
+		}
+	}
+	return 0;
+}
